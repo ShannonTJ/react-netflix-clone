@@ -32,7 +32,7 @@ export const Link = styled.a`
   color: #757575;
   margin-bottom: 20px;
   font-size: 13px;
-  text-direction: none;
+  text-decoration: none;
 `;
 
 export const Title = styled.p`
