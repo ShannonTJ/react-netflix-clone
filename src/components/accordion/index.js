@@ -15,3 +15,17 @@ Accordion.Title = function AccordionTitle({ children, ...restProps }) {
 Accordion.Frame = function AccordionFrame({ children, ...restProps }) {
   return <Frame {...restProps}>{children}</Frame>;
 };
+
+//give users ability to toggle
+Accordion.Item = function AccordionItem({ children, ...restProps }) {
+  const [toggleShow, setToggleShow] = useState(false);
+  return <Item {...restProps}>{children}</Item>;
+};
+
+Accordion.Header = function AccordionHeader({ children, ...restProps }) {
+  return (
+    <Header onClick={() => setToggle()} {...restProps}>
+      {children}
+    </Header>
+  );
+};
