@@ -1,9 +1,4 @@
-import React, {
-  createContext,
-  useState,
-  useContext,
-  createContext,
-} from "react";
+import React, { useState, useContext, createContext } from "react";
 import {
   Container,
   Frame,
