@@ -16,6 +16,7 @@ export const Inner = styled.div`
 export const Item = styled.div`
   color: #fff;
   margin-bottom: 10px;
+  max-width: 670px;
 
   &:first-of-type {
     margin-top: 3em;
@@ -49,7 +50,26 @@ export const Header = styled.div`
   }
 `;
 
-export const Body = styled.div``;
+export const Body = styled.div`
+  max-height: 1200px;
+  font-size: 26px;
+  font-weight: normal;
+  line-height: normal;
+  background: #303030;
+  padding: 0.8em 2.2em;
+  white-space: pre-wrap;
+  user-select: none;
+
+  transition-property: max-height;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+  transition-delay: 0s;
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+`;
 
 export const Frame = styled.div`
   margin-bottom: 40px;
