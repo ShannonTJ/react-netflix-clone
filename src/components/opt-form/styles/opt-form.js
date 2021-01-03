@@ -25,9 +25,10 @@ export const Input = styled.input`
 export const Button = styled.button`
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 70px;
   background: #e50914;
   color: #fff;
+  text-transform: uppercase;
   padding: 0 32px;
   font-size: 26px;
   border: 0;
@@ -35,6 +36,14 @@ export const Button = styled.button`
 
   &:hover {
     background: #f40612;
+  }
+
+  @media (max-width: 1000px) {
+    height: 50px;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 1rem;
   }
 
   img {
@@ -48,7 +57,16 @@ export const Button = styled.button`
   }
 `;
 
-export const Text = styled.p``;
+export const Text = styled.p`
+  font-size: 19.2px;
+  color: #fff;
+  text-align: center;
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+`;
 
 export const Break = styled.div`
   flex-basis: 100%;
