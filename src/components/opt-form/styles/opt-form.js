@@ -20,6 +20,13 @@ export const Input = styled.input`
   padding: 10px;
   height: 70px;
   box-sizing: border-box;
+  border: solid 1px #8c8c8c;
+
+  ::placeholder {
+    font-size: 16px;
+    font-weight: 600;
+    color: #363636;
+  }
 `;
 
 export const Button = styled.button`
@@ -30,8 +37,11 @@ export const Button = styled.button`
   color: #fff;
   text-transform: uppercase;
   padding: 0 32px;
-  font-size: 26px;
+  font-size: 1.875rem;
   border: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-left: 1px solid #333;
   cursor: pointer;
 
   &:hover {
