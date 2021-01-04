@@ -23,9 +23,17 @@ export const Frame = styled.div``;
 export const Background = styled.div`
   display: flex;
   flex-direction: column;
-  background: url(${({ src }) =>
-      src ? `../images/misc/${src}.jpg` : "../images/misc/home-bg.jpg"})
-    top left / cover no-repeat;
+
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0.3) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    radial-gradient(50% 100%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url(${({ src }) =>
+        src ? `../images/misc/${src}.jpg` : "../images/misc/home-bg.jpg"})
+      top left / cover no-repeat;
 `;
 
 export const Logo = styled.img`
