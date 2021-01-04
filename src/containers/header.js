@@ -3,12 +3,15 @@ import { Header } from "../components";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
 
-export function HeaderContainer({ children }) {
+export function HeaderContainer({ children, display }) {
+  console.log(display);
   return (
     <Header>
       <Header.Frame>
         <Header.Logo to={ROUTES.HOME} src={logo} alt="site logo" />
-        <Header.ButtonLink to={ROUTES.SIGN_IN}>Sign In</Header.ButtonLink>
+        <Header.ButtonLink to={ROUTES.SIGN_IN} display={display}>
+          Sign In
+        </Header.ButtonLink>
       </Header.Frame>
       {children}
     </Header>

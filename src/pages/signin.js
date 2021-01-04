@@ -19,13 +19,13 @@ const Signin = () => {
 
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer display="hidden">
         <Form>
           <Form.Title>Sign In</Form.Title>
           {error && <Form.Error>{error}</Form.Error>}
           <Form.Base onSubmit={handleSignIn} method="POST">
             <Form.Input
-              placeholder="Email address"
+              placeholder="Email or phone number"
               value={emailAddress}
               onChange={({ target }) => setEmailAddress(target.value)}
             />

@@ -9,7 +9,7 @@ import { FaqsContainer } from "../containers/faqs";
 const Home = () => {
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer display="visible">
         <Feature>
           <Feature.Title>Unlimited movies, TV shows, and more.</Feature.Title>
           <Feature.SubTitle>Watch anywhere. Cancel anytime.</Feature.SubTitle>

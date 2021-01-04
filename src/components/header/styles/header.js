@@ -62,6 +62,8 @@ export const ButtonLink = styled(ReactRouterLink)`
   box-sizing: border-box;
   line-height: normal;
 
+  visibility: ${(props) => props.display};
+
   &:hover {
     background-color: #f40612;
   }
