@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { SelectProfileContainer } from "./profiles";
 import { FirebaseContext } from "../context/firebase";
-import { Loading } from "../components";
+import { Header, Loading } from "../components";
 
 export function BrowseContainer({ slides }) {
   const [profile, setProfile] = useState({});
@@ -19,9 +19,10 @@ export function BrowseContainer({ slides }) {
   }, [profile.displayName]);
 
   return profile.displayName ? (
-    loading ? (
-      <Loading src={user.photoURL} />
-    ) : null
+    <>
+      {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
+      <Header src="joker1">hi</Header>
+    </>
   ) : (
     <SelectProfileContainer user={user} setProfile={setProfile} />
   );
