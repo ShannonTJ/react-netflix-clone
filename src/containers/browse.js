@@ -2,6 +2,8 @@ import React, { useContext, useState, useEffect } from "react";
 import { SelectProfileContainer } from "./profiles";
 import { FirebaseContext } from "../context/firebase";
 import { Header, Loading } from "../components";
+import * as ROUTES from "../constants/routes";
+import logo from "../logo.svg";
 
 export function BrowseContainer({ slides }) {
   const [profile, setProfile] = useState({});
@@ -21,8 +23,14 @@ export function BrowseContainer({ slides }) {
   return profile.displayName ? (
     <>
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
-      <Header src="joker1">
+      <Header src="joker1" dontShowBg>
+        <Header.Frame>
+          <Header.Logo to={ROUTES.HOME} src={logo} alt="site logo" />
+          <Header.TextLink>Shows</Header.TextLink>
+          <Header.TextLink>Movies</Header.TextLink>
+        </Header.Frame>
         <Header.Feature>
+          <Header.FeatureTitle>Watch Joker Now</Header.FeatureTitle>
           <Header.Text>
             Forever alone in a crowd, failed comedian Arthur Fleck seeks
             connection as he walks the streets of Gotham City. Arthur wears two

@@ -34,6 +34,10 @@ export const Background = styled.div`
     url(${({ src }) =>
         src ? `../images/misc/${src}.jpg` : "../images/misc/home-bg.jpg"})
       top left / cover no-repeat;
+
+  @media (max-width: 1100px) {
+    ${({ dontShowBg }) => dontShowBg && "background: none"}
+  }
 `;
 
 export const Logo = styled.img`
@@ -88,4 +92,27 @@ export const Text = styled.p`
   margin: 0;
 `;
 
-export const TextSmall = styled.p``;
+export const FeatureTitle = styled.h2`
+  color: #fff;
+  font-size: 50px;
+  line-height: normal;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+  margin: 0;
+  margin-bottom: 20px;
+`;
+
+export const Link = styled.p`
+  color: #fff;
+  text-decoration: none;
+  margin-right: 30px;
+  font-weight: ${({ active }) => (active === "true" ? "700" : "normal")};
+
+  &:hover {
+    font-weight: bold;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+`;
