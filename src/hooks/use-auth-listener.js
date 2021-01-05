@@ -9,5 +9,22 @@ export default function useAuthListener() {
 
   const { firebase } = useContext(FirebaseContext);
 
-  useEffect(() => {}, []);
+  //put authUser data in local storage (JSON format)
+  //runs on first hit of the page
+  useEffect(() => {
+    const listener = firebase.auth().onAuthStateChanged((authUser) => {
+      if (authUser) {
+        localStorage.setItem("authUser", JSON.stringify(authUser));
+        setUser(authUser);
+      } else {
+        localStorage.removeItem("authUser");
+        setUser(null);
+      }
+    });
+
+    //cleanup listener
+    return () => listener();
+  }, []);
+
+  return { user };
 }
