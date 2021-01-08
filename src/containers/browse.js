@@ -91,9 +91,19 @@ export function BrowseContainer({ slides }) {
                   <Card.Image
                     src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`}
                   />
+                  <Card.Meta>
+                    <Card.SubTitle>{item.title}</Card.SubTitle>
+                    <Card.Text>{item.description}</Card.Text>
+                  </Card.Meta>
                 </Card.Item>
               ))}
             </Card.Entities>
+            {/* <Card.Feature category={category}>
+              <Player>
+                <Player.Button />
+                <Player.Video src={"/videos/bunny.mp4"} />
+              </Player>
+            </Card.Feature> */}
           </Card>
         ))}{" "}
       </Card.Group>
