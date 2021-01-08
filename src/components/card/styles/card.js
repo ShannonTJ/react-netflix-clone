@@ -31,8 +31,8 @@ export const Group = styled.div`
   flex-direction: ${({ flexDirection }) =>
     flexDirection === "row" ? "row" : "column"};
 
-  ${({ alignItems }) => alignItems && `align-items: ${alignItems}`}
-  ${({ margin }) => margin && `margin: ${margin}`}
+  ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
+  ${({ margin }) => margin && `margin: ${margin}`};
 
   > ${Container}:first-of-type {
     @media (min-width: 1100px) {
@@ -53,7 +53,7 @@ export const SubTitle = styled.p`
 
 export const Text = styled.p`
   margin-top: 5px;
-  font-size: 10px;
+  font-size: 12px;
   color: #fff;
   margin-bottom: 0;
   user-select: none;
@@ -150,6 +150,16 @@ export const Meta = styled.div`
   background-color: #00000008f;
 `;
 
+export const Image = styled.img`
+  border: 0;
+  width: 100%;
+  max-width: 305px;
+  cursor: pointer;
+  height: auto;
+  padding: 0;
+  margin: 0;
+`;
+
 export const Entities = styled.div`
   display: flex;
   flex-direction: row;
@@ -161,11 +171,15 @@ export const Item = styled.div`
   margin-right: 5px;
   position: relative;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.5s;
 
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     z-index: 99;
+  }
+
+  &:hover ${Image} {
+    filter: brightness(30%);
   }
 
   @media (min-width: 1200px) {
@@ -190,14 +204,4 @@ export const Item = styled.div`
       margin-right: 30px;
     }
   }
-`;
-
-export const Image = styled.img`
-  border: 0;
-  width: 100%;
-  max-width: 305px;
-  cursor: pointer;
-  height: auto;
-  padding: 0;
-  margin: 0;
 `;
