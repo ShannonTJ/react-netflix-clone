@@ -86,3 +86,7 @@ export const Title = styled.h1`
     font-size: 35px;
   }
 `;
+
+export const Frame = styled.div`
+  margin-bottom: 40px;
+`;

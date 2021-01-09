@@ -6,6 +6,7 @@ import {
   Inner,
   Header,
   Body,
+  Frame,
 } from "./styles/accordion";
 
 const ToggleContext = createContext();
@@ -54,4 +55,8 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
 Accordion.Body = function AccordionBody({ children, ...restProps }) {
   const { toggleShow } = useContext(ToggleContext);
   return toggleShow ? <Body {...restProps}>{children}</Body> : null;
+};
+
+Accordion.Frame = function AccordionFrame({ children, ...restProps }) {
+  return <Frame {...restProps}>{children}</Frame>;
 };
