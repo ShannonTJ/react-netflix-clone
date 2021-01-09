@@ -147,7 +147,7 @@ export const Meta = styled.div`
   position: absolute;
   bottom: 0;
   padding: 10px;
-  background-color: #00000008f;
+  background-color: #0000008f;
 `;
 
 export const Image = styled.img`
@@ -176,10 +176,6 @@ export const Item = styled.div`
   &:hover {
     transform: scale(1.1);
     z-index: 99;
-  }
-
-  &:hover ${Image} {
-    filter: brightness(30%);
   }
 
   @media (min-width: 1200px) {
