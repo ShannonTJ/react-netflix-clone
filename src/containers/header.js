@@ -4,7 +4,6 @@ import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
 
 export function HeaderContainer({ children, display }) {
-  console.log(display);
   return (
     <Header>
       <Header.Frame>
