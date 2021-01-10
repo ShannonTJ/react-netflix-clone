@@ -53,12 +53,14 @@ export function BrowseContainer({ slides }) {
             <Header.TextLink
               active={category === "series" ? "true" : "false"}
               onClick={() => setCategory("series")}
+              data-testid="series-link"
             >
               Shows
             </Header.TextLink>
             <Header.TextLink
               active={category === "films" ? "true" : "false"}
               onClick={() => setCategory("films")}
+              data-testid="movies-link"
             >
               Movies
             </Header.TextLink>
