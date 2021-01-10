@@ -19,7 +19,6 @@ export function BrowseContainer({ slides }) {
   //profile starts empty
   //change loading to false when firebase data has been loaded
   useEffect(() => {
-    console.log("profile", profile);
     setTimeout(() => {
       setLoading(false);
     }, 3000);
@@ -95,7 +94,11 @@ export function BrowseContainer({ slides }) {
             he projects in a futile attempt to feel like he's part of the world
             around him.
           </Header.Text>
-          <Header.PlayButton>Play</Header.PlayButton>
+
+          <Player>
+            <Player.Button />
+            <Player.Video src={"/videos/bunny.mp4"} />
+          </Player>
         </Header.Feature>
       </Header>
       <Card.Group>

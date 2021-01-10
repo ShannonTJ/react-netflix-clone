@@ -90,6 +90,7 @@ export const Text = styled.p`
   line-height: normal;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
   margin: 0;
+  margin-bottom: 30px;
 `;
 
 export const FeatureTitle = styled.h2`
