@@ -62,11 +62,20 @@ const Signin = () => {
             </Form.Submit>
           </Form.Base>
           <Form.Text>
-            New to Netflix? <Form.Link to="/signup">Sign up now.</Form.Link>
+            New to REACT? <Form.Link to="/signup">Sign up now.</Form.Link>
           </Form.Text>
           <Form.TextSmall>
             This page is protected by Google reCAPTCHA to ensure you're not a
-            bot. Learn more.
+            bot.{" "}
+            <Form.Link
+              onClick={() => {
+                window.location.replace(
+                  "https://www.youtube.com/embed/dQw4w9WgXcQ?&autoplay=1"
+                );
+              }}
+            >
+              Learn more.
+            </Form.Link>
           </Form.TextSmall>
         </Form>
       </HeaderContainer>

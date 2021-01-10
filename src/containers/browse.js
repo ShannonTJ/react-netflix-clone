@@ -5,7 +5,7 @@ import { FirebaseContext } from "../context/firebase";
 import { Card, Header, Loading, Player } from "../components";
 import { FooterContainer } from "./footer";
 import * as ROUTES from "../constants/routes";
-import logo from "../logo.svg";
+import logo from "../logo.png";
 
 export function BrowseContainer({ slides }) {
   const [category, setCategory] = useState("series");
